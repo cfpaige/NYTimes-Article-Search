@@ -18,6 +18,8 @@ function topFunction() {
 
 //==================================================
 
+ require("dotenv").config();
+
 var searchTerm;
 var numResults;
 var startYear;
@@ -28,7 +30,7 @@ var articleCount;
 
 var resultsDiv = $("#resultsDiv");
 
-var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=2Ze13BVW4XjyIoc8WfpTp3XbdBVnNlds&q=";
+var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + process.env.NYT_KEY + "&q=";
 
 function setVariables() {
     searchTerm = $("#searchTerm").val();
@@ -48,7 +50,7 @@ function setVariables() {
 
 function buildQueryString() {
     // our API query endpoint URL
-    queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=2Ze13BVW4XjyIoc8WfpTp3XbdBVnNlds&q=";
+    queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + process.env.NYT_KEY + "&q=";
     // adds the search term to the end of the url
     queryUrl = queryUrl + searchTerm;
     console.log(queryUrl);
