@@ -1,5 +1,5 @@
 //==================================================
-//added scroll back to top button:
+//added onscroll to top button:
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -51,14 +51,16 @@ function buildQueryString() {
     queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=2Ze13BVW4XjyIoc8WfpTp3XbdBVnNlds&q=";
     // adds the search term to the end of the url
     queryUrl = queryUrl + searchTerm;
+    console.log(queryUrl);
     // adds the start and end year parameters if the user inputs any, otherwise the queryUrl is left alone
     if (startYear !== "") {
         queryUrl = queryUrl + "&begin_date=" + startYear + "0101";
     }
     if (endYear !== "") {
         queryUrl = queryUrl + "&end_date=" + endYear + "1231";
-    }
+    };
 }
+
 
 // So this function is what was causing us most of our trouble, but the bug was a pretty small one
 function populatePage(responseData) {

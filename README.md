@@ -1,2 +1,3 @@
-# NYTimes-Article-Search
-group class project using NYT API
+## News Article Search ##
+
+Group class project using NYT API.
