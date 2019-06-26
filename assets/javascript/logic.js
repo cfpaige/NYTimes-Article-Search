@@ -30,7 +30,7 @@ var articleCount;
 
 var resultsDiv = $("#resultsDiv");
 
-var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + process.env.NYT_KEY + "&q=";
+var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=IVDMPaBYYD4ABMGmEsDAF6Qrjda2uggU&q=";
 
 function setVariables() {
     searchTerm = $("#searchTerm").val();
@@ -50,7 +50,7 @@ function setVariables() {
 
 function buildQueryString() {
     // our API query endpoint URL
-    queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + process.env.NYT_KEY + "&q=";
+    queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=IVDMPaBYYD4ABMGmEsDAF6Qrjda2uggU&q=";
     // adds the search term to the end of the url
     queryUrl = queryUrl + searchTerm;
     console.log(queryUrl);
